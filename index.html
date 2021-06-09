@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/png" href="./icono.png" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="./index.js"></script>
+    <title>Te amo #11 ♥</title>
+</head>
+<body >
+    <a-scene>
+        <a-assets>
+            <audio src="./resources/sounds/y2mate.com - Macaco  Coincidir Letra_320kbps.mp3" id="s1"></audio>
+            <img src="./resources/fotosMiPrincesa.jpg" id="a1">
+            <img src="./resources/colores-purpuras-romantico-cielo-al-atardecer_1962-699.jpg" id="a2">
+            <img src="./resources/generatedtext (2).png" id="m1">
+            <img src="./resources/generatedtext (3).png" id="m2">
+            <img src="./resources/generatedtext (4).png" id="m3">
+            <img src="./resources/generatedtext (5).png" id="m4">
+            <img src="./resources/generatedtext (6).png" id="m5">
+            <img src="./resources/generatedtext (7).png" id="m6">
+            <img src="./resources/generatedtext (8).png" id="m7">
+            <img src="./resources/generatedtext (9).png" id="m8">
+            <img src="./resources/generatedtext (10).png" id="m9">
+            <img src="./resources/generatedtext (11).png" id="m10">
+            <img src="./resources/generatedtext (12).png" id="m11">
+        </a-assets>
+        <a-circle id="boton1" src="#a2" onclick="siguiente()" position="0 4 -5" radius="1"><a-entity text="value:click o mirame por unos 
+            segundos para continuar; width:3;" position="0.75 0 0"></a-entity></a-circle>
+        <a-circle src="#a2" onclick="frases()" position="0 -1 -5" radius="1"><a-entity text="value:click o mirame por unos 
+                segundos para empezar; width:3;" position="0.75 0 0"></a-entity></a-circle>
+        <a-camera sound="src: #s1; autoplay: true">
+            <a-cursor color="white"></a-cursor>
+            <a-plane visible="false" id="frase" src="#m1" position=" 0 -0.2 -1" material="opacity: 10; alphaTest: 1" height="0.3" width="2.2"></a-plane>
+        </a-camera>
+        <a-sky rotation="0 260 0" src="#a1" id="cielo"></a-sky>
+    </a-scene>
+</body>
+</html>z
