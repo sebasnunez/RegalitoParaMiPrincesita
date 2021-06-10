@@ -14,7 +14,9 @@
     <a-scene>
         <a-assets>
             <audio src="./resources/sounds/y2mate.com - Macaco  Coincidir Letra_320kbps.mp3" id="s1"></audio>
-            <img src="./resources/fotosMiPrincesa.jpg" id="a1">
+            <img src="./resources/fotosMiPrincesa1.jpg" id="c1">
+            <img src="./resources/fotosMiPrincesa2.jpg" id="c2">
+            <img src="./resources/arrow-icon-28.png" id="arrow">
             <img src="./resources/colores-purpuras-romantico-cielo-al-atardecer_1962-699.jpg" id="a2">
             <img src="./resources/generatedtext (2).png" id="m1">
             <img src="./resources/generatedtext (3).png" id="m2">
@@ -28,15 +30,16 @@
             <img src="./resources/generatedtext (11).png" id="m10">
             <img src="./resources/generatedtext (12).png" id="m11">
         </a-assets>
-        <a-circle id="boton1" src="#a2" onclick="siguiente()" position="0 4 -5" radius="1"><a-entity text="value:click o mirame por unos 
+        <a-circle id="boton1" visible="false" src="#a2" onclick="siguiente()" position="0 3.7 -5" radius="1"><a-entity text="value:click o mirame por unos 
             segundos para continuar; width:3;" position="0.75 0 0"></a-entity></a-circle>
-        <a-circle src="#a2" onclick="frases()" position="0 -1 -5" radius="1"><a-entity text="value:click o mirame por unos 
+        <a-circle id="boton3" src="#a2" onclick="frases()" position="0 -0.5 -5" radius="1"><a-entity text="value:click o mirame por unos 
                 segundos para empezar; width:3;" position="0.75 0 0"></a-entity></a-circle>
+        <a-plane id="boton2" src="#arrow" onclick="nextSky()" position="2 1.7 -5" material="opacity: 10; alphaTest: 1"></a-plane>
         <a-camera sound="src: #s1; autoplay: true">
             <a-cursor color="white"></a-cursor>
-            <a-plane visible="false" id="frase" src="#m1" position=" 0 -0.2 -1" material="opacity: 10; alphaTest: 1" height="0.3" width="2.2"></a-plane>
+            <a-plane visible="false" id="frase" src="#m1" position=" 0 -0.2 -1" material="opacity: 10; alphaTest: 1" height="0.25" width="1.5"></a-plane>
         </a-camera>
-        <a-sky rotation="0 260 0" src="#a1" id="cielo"></a-sky>
+        <a-sky rotation="0 260 0" src="#c1" id="cielo"></a-sky>
     </a-scene>
 </body>
 </html>z

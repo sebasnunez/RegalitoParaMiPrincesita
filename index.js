@@ -1,8 +1,10 @@
-var parte2=false;
+var parte2=0;
 
 function frases(){
     var frase = document.getElementById('frase');
     frase.setAttribute('visible','true');
+    var boton3 = document.getElementById('boton3');
+    boton3.setAttribute('visible', 'false');
     setTimeout(function(){
         var frase = document.getElementById('frase');
         frase.setAttribute('src','#m2');
@@ -51,19 +53,47 @@ function frases(){
     setTimeout(function(){
         var frase = document.getElementById('frase');
         frase.setAttribute('src','#m11');
-        parte2=true;
     }
     ,50000);
+    setTimeout(function(){
+        var frase = document.getElementById('frase');
+        frase.setAttribute('visible','false');
+        parte2+=1;
+        if(parte2==2){
+            var boton1 = document.getElementById('boton1');
+            boton1.setAttribute('visible','true');
+        }
+    }
+    ,55000);
 }
 
 function siguiente(){
-    if(parte2){
+    if(parte2==2){
         window.location.href = './video.html';
     }
     else{
-        window.alert("Primero termina esta parte");
     }
 }
 function anterior(){
     window.location.href = './';
+}
+function nextSky(){
+    var cielo = document.getElementById('cielo');
+    var boton2 = document.getElementById('boton2');
+    boton2.setAttribute('visible','false');
+    cielo.setAttribute('src', '#c2');
+    parte2+=1;
+    if(parte2==2){
+        var boton1 = document.getElementById('boton1');
+        boton1.setAttribute('visible','true');
+    }
+}
+function playvid(){
+    var v1 = document.getElementById('v1');
+    v1.play();
+    var botonp = document.querySelector('#botonPlay');
+    botonp.setAttribute('visible','false');
+    botonp.setAttribute('onclick', 'nada()');
+}
+function nada(){
 }

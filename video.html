@@ -13,16 +13,17 @@
 <body>
     <a-scene>
         <a-assets>
-            <video autoplay loop="true" autoplay src="./resources/VideoMiPrincesa.mp4" id="v1"></video>
+            <video loop="true" src="./resources/VideoMiPrincesa.mp4" id="v1"></video>
             <img src="./resources/colores-purpuras-romantico-cielo-al-atardecer_1962-699.jpg" id="a1">
             <img src="./resources/generatedtext (13).png" id="a2">
+            <img src="./resources/istockphoto-908327012-170667a.png" id="a3">
         </a-assets>
 
-        <a-circle src="#a1" onclick="anterior()" position="0 5.5 -5" radius="1"><a-entity text="value:click o mirame por unos 
+        <a-circle src="#a1" onclick="anterior()" position="0 5.4 -5" radius="0.8"><a-entity text="value:click o mirame por unos 
             segundos para regresar; width:3;" position="0.75 0 0"></a-entity></a-circle>
 
-        <a-video src="#v1" width="10" height="6" position="0 1.5 -5"></a-video>
-
+        <a-plane src="#v1" width="10" height="6" position="0 1.5 -5"></a-plane>
+        <a-circle id="botonPlay" onclick="playvid()" src="#a3"  position="0 3 -4" material="opacity: 10; alphaTest: 1" radius="0.5"></a-circle>
         <a-plane src="#a2" material="opacity: 10; alphaTest: 1" width="5" rotation="0 180 0" position="1 2 5"></a-plane>
 
         <a-camera sound="src: #s1; autoplay: true">
