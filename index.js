@@ -97,7 +97,7 @@ function playvid(){
 }
 function nada(){
 }
-function enterVR(){
+function enterInVR(){
     ir(navigator.userAgent.match(/Android/i)
  || navigator.userAgent.match(/webOS/i)
  || navigator.userAgent.match(/iPhone/i)
@@ -108,4 +108,4 @@ function enterVR(){
         document.querySelector('a-scene').enterVR();
     }
 }
-enterVR();
+enterInVR();
